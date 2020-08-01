@@ -1,92 +1,65 @@
 package com.example.android_hw;
 
+import androidx.annotation.NonNull;
+
+import com.google.gson.annotations.SerializedName;
+
 public class Video {
 
-//    private String nickName;
-//
-//    private String videoUrl;
+    @SerializedName("_id")
+    public String id;
+
+    @SerializedName("feedurl")
+    public String feed_url;
+
+    @SerializedName("nickname")
+    public String nickname;
+
+    @SerializedName("description")
+    public String description;
+
+    @SerializedName("likecount")
+    public int like_count;
+
+    @SerializedName("avatar")
+    public String avatar;
+
+    @NonNull
+    @Override
+    public String toString() {
+        return " _id: " + id +
+                " feedurl: " + feed_url +
+                " nickname: " + nickname +
+                " description: " + description +
+                " likecount: " + like_count +
+                "avatar: " + avatar;
+    }
+
+}
+
+//public class Video {
 //
 //    private String description;
 //
-//    private String avatarUrl;
+//    private int imageId;
 //
-//    private int likeCount;
-//
-//    private String videoId;
-//
-//    public Video(String videoId, String videoUrl, String nickName, String description, int likeCount, String avatarUrl){
-//
-//        this.videoId = videoId;
-//
-//        this.videoUrl = videoUrl;
-//
-//        this.nickName = nickName;
+//    public Video(String description, int imageId){
 //
 //        this.description = description;
 //
-//        this.likeCount = likeCount;
-//
-//        this.avatarUrl = avatarUrl;
+//        this.imageId = imageId;
 //
 //    }
 //
-//    public String getVideoId(){
-//
-//        return videoId;
-//
-//    }
-//
-//    public String getVideoUrl(){
-//
-//        return videoUrl;
-//
-//    }
-//
-//    public String getNickName(){
-//
-//        return nickName;
-//
-//    }
-//
-//    public String getDescription(){
+//    public String getDescription() {
 //
 //        return description;
 //
 //    }
 //
-//    public int getLikeCount(){
+//    public int getImageId() {
 //
-//        return likeCount;
-//
+//        return imageId;
 //    }
 //
-//    public String getAvatarUrl(){
-//
-//        return avatarUrl;
-//
-//    }
-
-    private String description;
-
-    private int imageId;
-
-    public Video(String description, int imageId){
-
-        this.description = description;
-
-        this.imageId = imageId;
-
-    }
-
-    public String getDescription() {
-
-        return description;
-
-    }
-
-    public int getImageId() {
-
-        return imageId;
-    }
-
-}
+//}
