@@ -105,9 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * 播放视频
-     */
     private void playVideo(int position, View view) {
         if (view != null) {
             mVideoView = view.findViewById(R.id.video_view);
@@ -115,9 +112,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * 停止播放
-     */
     private void releaseVideo(View view) {
         if (view != null) {
             IjkVideoView videoView = view.findViewById(R.id.video_view);

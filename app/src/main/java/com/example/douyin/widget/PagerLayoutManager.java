@@ -68,47 +68,24 @@ public class PagerLayoutManager extends LinearLayoutManager {
     }
 
 
-    /**
-     * 监听竖直方向的相对偏移量
-     *
-     * @param dy
-     * @param recycler
-     * @param state
-     * @return
-     */
     @Override
     public int scrollVerticallyBy(int dy, RecyclerView.Recycler recycler, RecyclerView.State state) {
         this.mDrift = dy;
         return super.scrollVerticallyBy(dy, recycler, state);
     }
 
-    /**
-     * 监听水平方向的相对偏移量
-     *
-     * @param dx
-     * @param recycler
-     * @param state
-     * @return
-     */
     @Override
     public int scrollHorizontallyBy(int dx, RecyclerView.Recycler recycler, RecyclerView.State state) {
         this.mDrift = dx;
         return super.scrollHorizontallyBy(dx, recycler, state);
     }
 
-    /**
-     * 设置监听
-     *
-     * @param listener
-     */
     public void setOnViewPagerListener(OnViewPagerListener listener) {
         this.mOnViewPagerListener = listener;
     }
 
     private RecyclerView.OnChildAttachStateChangeListener mChildAttachStateChangeListener = new RecyclerView.OnChildAttachStateChangeListener() {
-        /**
-         * itemView依赖Window
-         */
+
         @Override
         public void onChildViewAttachedToWindow(View view) {
             if (mOnViewPagerListener != null && getChildCount() == 1) {
@@ -116,9 +93,7 @@ public class PagerLayoutManager extends LinearLayoutManager {
             }
         }
 
-        /**
-         *itemView脱离Window
-         */
+
         @Override
         public void onChildViewDetachedFromWindow(View view) {
             if (mDrift >= 0) {
