@@ -8,12 +8,6 @@ import java.util.List;
 public class DataUtils {
     public static ArrayList<Bean> getDatas(List<Video> videoList) {
 
-//        for(int i=0; i<videoList.size(); i++){
-//
-//            Log.d("HHH",videoList.get(i).toString());
-//
-//        }
-
         ArrayList<Bean> beanList = new ArrayList<>();
 
         for(int i=0; i<videoList.size(); i++){

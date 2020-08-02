@@ -36,30 +36,3 @@ public class Video {
     }
 
 }
-
-//public class Video {
-//
-//    private String description;
-//
-//    private int imageId;
-//
-//    public Video(String description, int imageId){
-//
-//        this.description = description;
-//
-//        this.imageId = imageId;
-//
-//    }
-//
-//    public String getDescription() {
-//
-//        return description;
-//
-//    }
-//
-//    public int getImageId() {
-//
-//        return imageId;
-//    }
-//
-//}

@@ -10,7 +10,7 @@ public class PagerLayoutManager extends LinearLayoutManager {
     private PagerSnapHelper mPagerSnapHelper;
     private OnViewPagerListener mOnViewPagerListener;
     private RecyclerView mRecyclerView;
-    private int mDrift;//位移，用来判断移动方向
+    private int mDrift;
 
     public PagerLayoutManager(Context context, int orientation) {
         super(context, orientation, false);
@@ -39,14 +39,7 @@ public class PagerLayoutManager extends LinearLayoutManager {
         super.onLayoutChildren(recycler, state);
     }
 
-    /**
-     * 滑动状态的改变
-     * 缓慢拖拽-> SCROLL_STATE_DRAGGING
-     * 快速滚动-> SCROLL_STATE_SETTLING
-     * 空闲状态-> SCROLL_STATE_IDLE
-     *
-     * @param state
-     */
+
     @Override
     public void onScrollStateChanged(int state) {
         switch (state) {

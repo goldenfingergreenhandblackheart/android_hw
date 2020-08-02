@@ -97,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         releaseVideo(view);
                     }
+
+
                 });
             }
         });
